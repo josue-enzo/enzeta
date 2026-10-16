@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #240e10;
+  background: #f3ece9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes pulse-glow { 0%, 100% { opacity: .45; transform: scale(.95); } 50% { opacity: .9; transform: scale(1.08); } }
+.marquee-track { animation: marquee 24s linear infinite; }
+.glow { animation: pulse-glow 5s ease-in-out infinite; }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
